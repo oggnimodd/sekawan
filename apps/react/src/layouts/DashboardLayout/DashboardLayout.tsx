@@ -16,7 +16,7 @@ const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => {
       <div className="md:ml-[250px] flex-1 bg-default-50">
         <DesktopHeader />
         <MobileHeader toggleSidebar={toggleSidebar} />
-        <div className="flex flex-col px-4">{children}</div>
+        <div className="flex flex-col px-4 pb-10">{children}</div>
       </div>
     </div>
   );

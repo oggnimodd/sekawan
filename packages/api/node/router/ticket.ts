@@ -1,5 +1,34 @@
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 
+type TicketSummary = {
+  id: string;
+  status: string;
+  count: number;
+};
+
+const unresolvedTicketsSummary: TicketSummary[] = [
+  {
+    status: "Waiting on Feature Request",
+    id: "4238",
+    count: 4238,
+  },
+  {
+    status: "Awaiting Customer Response",
+    id: "1005",
+    count: 1005,
+  },
+  {
+    status: "Awaiting Developer Fix",
+    id: "914",
+    count: 914,
+  },
+  {
+    status: "Pending",
+    id: "281",
+    count: 281,
+  },
+];
+
 export const ticketRouter = createTRPCRouter({
   getOverview: protectedProcedure.query(() => {
     return [
@@ -47,5 +76,8 @@ export const ticketRouter = createTRPCRouter({
         },
       ],
     };
+  }),
+  getUnresolvedTicketsSummary: protectedProcedure.query(() => {
+    return unresolvedTicketsSummary;
   }),
 });
