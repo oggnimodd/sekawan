@@ -14,14 +14,9 @@ export const SignUpSchema = z
       .min(8, "Confirm Password must be at least 8 characters"),
     code: z.string().optional(),
   })
-  .superRefine((data) => {
-    if (data.password !== data.confirmPassword) {
-      return {
-        code: "custom",
-        message: "Passwords do not match",
-        path: ["confirmPassword"],
-      };
-    }
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
   });
 
 export type SignInData = z.infer<typeof SignInSchema>;
