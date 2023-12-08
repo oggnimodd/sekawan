@@ -7,7 +7,7 @@ const MembersPage = () => {
   const { data: members, isLoading } = api.member.getMembers.useQuery();
 
   if (!members) {
-    return null;
+    return <></>;
   }
 
   return (

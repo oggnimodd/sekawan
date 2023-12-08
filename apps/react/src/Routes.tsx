@@ -6,6 +6,7 @@ import {
   SignUpPage,
   TicketsPage,
   MembersPage,
+  CreateTicketPage,
 } from "pages";
 import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
 
@@ -34,6 +35,11 @@ const routes = [
   {
     path: "/tickets",
     component: TicketsPage,
+    type: "protected",
+  },
+  {
+    path: "/tickets/new",
+    component: CreateTicketPage,
     type: "protected",
   },
   {
