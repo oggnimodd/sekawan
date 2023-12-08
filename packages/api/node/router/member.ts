@@ -2,7 +2,7 @@ import { createTRPCRouter, protectedProcedure } from "../trpc";
 import { faker } from "@faker-js/faker";
 import { nanoid } from "nanoid";
 
-const members = Array.from({ length: 12 }).map((i) => {
+const members = Array.from({ length: 12 }).map(() => {
   return {
     id: nanoid(),
     name: faker.person.fullName(),
