@@ -38,7 +38,7 @@ const Sidebar: FC<SidebarProps> = ({
     <div
       ref={ref}
       className={clsx(
-        "w-[250px] h-screen md:translate-x-0 md:flex flex-col bg-background dark fixed z-50",
+        "w-[250px] h-screen md:translate-x-0 md:flex flex-col bg-background dark fixed z-50 rounded-tr-2xl rounded-br-3xl",
         { "-translate-x-full": !isSidebarOpen, "!translate-x-0": isMd },
       )}
     >
