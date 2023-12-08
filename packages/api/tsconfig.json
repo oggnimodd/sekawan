@@ -1,0 +1,4 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["next", "index.ts", "node/router/link.ts"]
+}
