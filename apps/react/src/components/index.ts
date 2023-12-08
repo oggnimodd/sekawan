@@ -5,3 +5,4 @@ export * from "./ProtectedRoute";
 export * from "./Sidebar";
 export * from "./Headers";
 export * from "./Overview";
+export * from "./Tickets";

@@ -13,10 +13,10 @@ const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => {
   return (
     <div className="flex w-full min-h-screen">
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-      <div className="md:ml-[250px] flex-1 bg-default-50">
+      <div className="md:pl-[250px] w-full bg-default-50">
         <DesktopHeader />
         <MobileHeader toggleSidebar={toggleSidebar} />
-        <div className="flex flex-col px-4 pb-10">{children}</div>
+        <div className="flex flex-col px-4 pb-10 w-full">{children}</div>
       </div>
     </div>
   );
