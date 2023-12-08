@@ -24,3 +24,13 @@ The application is set up using bun workspace, and its dashboard is in `apps/rea
 4. Clerk guidance is available here: [https://clerk.com/docs/quickstarts/react](https://clerk.com/docs/quickstarts/react)
 5. Prisma and Turso guidance can be found here: [https://www.prisma.io/blog/prisma-turso-ea-support-rXGd_Tmy3UXX](https://www.prisma.io/blog/prisma-turso-ea-support-rXGd_Tmy3UXX)
 6. After filling in `.env` in the root directory, run `bun run dev` in `apps/react` and `bun run dev` in `packages/api`.
+
+##### Sreenshots
+
+<img src="./ss/1.png"/>
+<img src="./ss/2.png"/>
+<img src="./ss/4.png"/>
+<img src="./ss/5.png"/>
+<img src="./ss/6.png"/>
+<img src="./ss/7.png"/>
+<img src="./ss/8.png"/>
