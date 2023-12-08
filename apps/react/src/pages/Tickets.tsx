@@ -1,8 +1,10 @@
+import { DashboardLayout } from "layouts";
+
 const TicketsPage = () => {
   return (
-    <div>
+    <DashboardLayout>
       <p>Hello, World!</p>
-    </div>
+    </DashboardLayout>
   );
 };
 

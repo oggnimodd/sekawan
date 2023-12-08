@@ -11,6 +11,10 @@ const links = [
     name: "Tickets",
     href: "/tickets",
   },
+  {
+    name: "Members",
+    href: "/members",
+  },
 ];
 
 const SidebarLinks: FC = () => {

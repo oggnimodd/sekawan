@@ -1,5 +1,5 @@
 import { Story } from "@ladle/react";
-import TeamMemberCard from ".";
+import TeamMemberCard from "./TeamMemberCard";
 import { faker } from "@faker-js/faker";
 import { nanoid } from "nanoid";
 

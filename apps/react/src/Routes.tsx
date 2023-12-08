@@ -1,5 +1,12 @@
 import { ProtectedRoute } from "components";
-import { Home, NotFound, SignInPage, SignUpPage, TicketsPage } from "pages";
+import {
+  Home,
+  NotFound,
+  SignInPage,
+  SignUpPage,
+  TicketsPage,
+  MembersPage,
+} from "pages";
 import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
 
 interface Page {
@@ -27,8 +34,14 @@ const routes = [
   {
     path: "/tickets",
     component: TicketsPage,
-    type: "public",
+    type: "protected",
   },
+  {
+    path: "/members",
+    component: MembersPage,
+    type: "protected",
+  },
+
   {
     path: "*",
     component: NotFound,
