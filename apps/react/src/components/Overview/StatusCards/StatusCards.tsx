@@ -1,10 +1,10 @@
 import { FC } from "react";
-import Card from "./Card";
+import StatusCard from "./StatusCard";
 import { nanoid } from "nanoid";
 import { Skeleton } from "@nextui-org/react";
 import { api } from "trpc";
 
-const StatusCard: FC = () => {
+const StatusCards: FC = () => {
   const { isLoading, data } = api.ticket.getOverview.useQuery();
 
   if (isLoading) {
@@ -24,10 +24,10 @@ const StatusCard: FC = () => {
   return (
     <div className="w-full gap-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
       {data.map((status) => (
-        <Card title={status.title} count={status.count} key={nanoid()} />
+        <StatusCard title={status.title} count={status.count} key={nanoid()} />
       ))}
     </div>
   );
 };
 
-export default StatusCard;
+export default StatusCards;

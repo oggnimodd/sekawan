@@ -18,7 +18,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   linkedin,
 }) => {
   return (
-    <Card shadow="lg" className="md:max-w-md py-8">
+    <Card className="md:max-w-md py-8">
       <div className="flex flex-col items-center">
         <Image
           className="mb-5"

@@ -1,21 +1,22 @@
 import { FC } from "react";
+import { Card } from "@nextui-org/react";
 
-interface CardProps {
+interface StatusCardProps {
   title: string;
   count: number;
 }
 
-const Card: FC<CardProps> = ({ title, count }) => {
+const StatusCard: FC<StatusCardProps> = ({ title, count }) => {
   return (
-    <div className="group w-full rounded-lg flex-col px-8 py-6 bg-default-100 border-foreground/40 dark:border-foreground/10 border-1 hover:!border-primary">
+    <Card className="group w-full rounded-lg flex-col px-8 py-6 border-foreground/40 dark:border-foreground/10 border-1 hover:!border-primary">
       <p className="font-semibold text-foreground/60 text-center text-lg mb-2 group-hover:text-primary-500">
         {title}
       </p>
       <p className="text-4xl font-medium text-center group-hover:text-primary-500">
         {count}
       </p>
-    </div>
+    </Card>
   );
 };
 
-export default Card;
+export default StatusCard;

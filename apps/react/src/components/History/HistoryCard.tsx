@@ -1,3 +1,4 @@
+import { Card } from "@nextui-org/react";
 import clsx from "clsx";
 import { FC } from "react";
 
@@ -15,9 +16,10 @@ const HistoryCard: FC<HistoryCardProps> = ({
   isFirst,
 }) => {
   return (
-    <div
+    <Card
+      shadow="none"
       className={clsx(
-        "group w-full flex-col px-8 py-6 bg-default-100",
+        "group w-full flex-col px-8 py-6 rounded-none",
         !isLast && "border-foreground/40 dark:border-foreground/10 border-b-1 ",
         isFirst && "border-b-1 border-t-1 md:border-t-0",
       )}
@@ -28,7 +30,7 @@ const HistoryCard: FC<HistoryCardProps> = ({
       <p className="text-2xl font-medium text-center group-hover:text-primary-500">
         {count}
       </p>
-    </div>
+    </Card>
   );
 };
 
