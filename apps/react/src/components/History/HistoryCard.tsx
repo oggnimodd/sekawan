@@ -11,7 +11,7 @@ const HistoryCard: FC<HistoryCardProps> = ({ title, count, isLast }) => {
   return (
     <div
       className={clsx(
-        "group w-full flex-col px-8 py-6 bg-default-100 hover:!border-primary",
+        "group w-full flex-col px-8 py-6 bg-default-100",
         !isLast && "border-foreground/40 dark:border-foreground/10 border-b-1 ",
       )}
     >

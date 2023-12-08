@@ -2,15 +2,13 @@ import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import { useDarkMode } from "hooks";
 import { colors } from "tailwind";
+import { FC } from "react";
 
-const series = [
-  {
-    name: "Tickets",
-    data: [30, 40, 45, 50, 49, 60, 70, 91, 125],
-  },
-];
+interface GraphProps {
+  data: number[];
+}
 
-const Graph = () => {
+const Graph: FC<GraphProps> = ({ data }) => {
   const { isDark } = useDarkMode();
 
   const options: ApexOptions = {
@@ -50,6 +48,14 @@ const Graph = () => {
       mode: isDark ? "dark" : "light",
     },
   };
+
+  const series = [
+    {
+      name: "Tickets",
+      data,
+    },
+  ];
+
   return <Chart options={options} series={series} type="line" />;
 };
 

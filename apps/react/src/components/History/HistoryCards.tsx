@@ -1,14 +1,22 @@
+import { FC } from "react";
 import HistoryCard from "./HistoryCard";
 import { nanoid } from "nanoid";
 
-const HistoryCards = () => {
+interface HistoryCardsProps {
+  meta: {
+    title: string;
+    count: string;
+  }[];
+}
+
+const HistoryCards: FC<HistoryCardsProps> = ({ meta }) => {
   return (
     <div className="w-full flex flex-col">
-      {Array.from({ length: 5 }).map((_i, id) => (
+      {meta.map((item, id) => (
         <HistoryCard
           isLast={id === 4}
-          title={"Title"}
-          count={"10"}
+          title={item.title}
+          count={item.count}
           key={nanoid()}
         />
       ))}
