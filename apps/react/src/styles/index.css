@@ -5,3 +5,8 @@
 body{
   @apply bg-background;
 }
+
+
+div[type="line"]:has(.apexcharts-canvas){
+  @apply flex w-full;
+}

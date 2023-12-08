@@ -15,3 +15,4 @@ type Breakpoints = {
 };
 
 export const breakpoints = fullConfig.theme?.screens as Breakpoints;
+export const colors = fullConfig.theme?.colors as any;
