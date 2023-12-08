@@ -20,7 +20,7 @@ type ChipColor = "primary" | "success" | "default" | "danger";
 const chipColors: Record<Task["priority"], ChipColor> = {
   new: "primary",
   finished: "success",
-  default: "default",
+  normal: "default",
   urgent: "danger",
 };
 

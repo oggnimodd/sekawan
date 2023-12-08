@@ -4,7 +4,7 @@ import { createTRPCRouter, protectedProcedure } from "../trpc";
 export interface Task {
   id: string;
   title: string;
-  priority: "new" | "finished" | "default" | "urgent";
+  priority: "new" | "finished" | "normal" | "urgent";
   isCompleted: boolean;
 }
 
@@ -30,7 +30,7 @@ const tasks: Task[] = [
   {
     id: nanoid(),
     title: "Retest ticket examples",
-    priority: "default",
+    priority: "normal",
     isCompleted: true,
   },
 ];
