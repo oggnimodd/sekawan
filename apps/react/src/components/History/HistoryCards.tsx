@@ -14,7 +14,8 @@ const HistoryCards: FC<HistoryCardsProps> = ({ meta }) => {
     <div className="w-full flex flex-col">
       {meta.map((item, id) => (
         <HistoryCard
-          isLast={id === 4}
+          isLast={id === meta.length - 1}
+          isFirst={id === 0}
           title={item.title}
           count={item.count}
           key={nanoid()}
