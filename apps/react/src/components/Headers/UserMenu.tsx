@@ -11,7 +11,15 @@ import {
 import { FC, useEffect } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useAuth, useUser } from "@clerk/clerk-react";
-import { Power as LogOutIcon, Plus, LayoutDashboard, Bug } from "lucide-react";
+import {
+  Power as LogOutIcon,
+  Plus,
+  LayoutDashboard,
+  Bug,
+  Sun,
+  Moon,
+} from "lucide-react";
+import { useDarkMode } from "hooks";
 
 const ICON_SIZE = 20;
 
@@ -19,6 +27,7 @@ const UserMenu: FC = () => {
   const navigate = useNavigate();
   const { user, isLoaded } = useUser();
   const { signOut } = useAuth();
+  const { toggleTheme, isDark } = useDarkMode();
 
   if (!isLoaded) {
     return <Skeleton className="flex rounded-full w-8 h-8" />;
@@ -95,6 +104,19 @@ const UserMenu: FC = () => {
           key="report-bug"
         >
           Report a bug
+        </DropdownItem>
+        <DropdownItem
+          startContent={
+            isDark ? (
+              <Moon className="mr-2" size={ICON_SIZE} />
+            ) : (
+              <Sun className="mr-2" size={ICON_SIZE} />
+            )
+          }
+          onPress={() => toggleTheme()}
+          key="toggle-theme"
+        >
+          Toggle Theme
         </DropdownItem>
         <DropdownItem
           startContent={<LogOutIcon className="mr-2" size={ICON_SIZE} />}

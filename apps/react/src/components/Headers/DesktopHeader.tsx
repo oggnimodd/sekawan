@@ -9,7 +9,7 @@ const DesktopHeader = () => {
     pathname === "/" ? "Dashboard" : formatPath(pathname);
 
   return (
-    <header className="w-full md:flex items-center justify-between p-4 hidden">
+    <header className="w-full md:flex items-center justify-between p-4 hidden mb-4">
       {/* Page Title */}
       <p className="text-lg font-semibold text-foreground">
         {formattedPathname}

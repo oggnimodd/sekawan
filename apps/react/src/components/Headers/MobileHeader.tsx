@@ -9,7 +9,7 @@ interface MobileHeaderProps {
 
 const MobileHeader: FC<MobileHeaderProps> = ({ toggleSidebar }) => {
   return (
-    <header className="w-full flex items-center justify-between p-4 md:hidden">
+    <header className="w-full flex items-center justify-between p-4 md:hidden mb-4">
       <Button
         isIconOnly
         startContent={<Menu />}
