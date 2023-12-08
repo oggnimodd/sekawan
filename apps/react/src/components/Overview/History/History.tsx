@@ -18,7 +18,7 @@ const History: FC = () => {
       <div className="w-full lg:w-8/12 p-6 md:p-8 flex h-full">
         <Graph data={data.graphData} />
       </div>
-      <div className="w-full lg:w-4/12 border-foreground/40 dark:border-foreground/10 border-l-1 flex">
+      <div className="w-full lg:w-4/12 border-foreground/40 dark:border-foreground/10 border-l-0 lg:border-l-1 flex">
         <HistoryCards meta={data.meta} />
       </div>
     </Card>
